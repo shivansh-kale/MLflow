@@ -8,9 +8,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 import dagshub
-dagshub.init(repo_owner='vikashdasXXX', repo_name='YT-MLOPS-Experiments-with-MLFlow', mlflow=True)
+dagshub.init(repo_owner='shivanshkale17', repo_name='MLflow', mlflow=True)
 
-mlflow.set_tracking_uri("https://dagshub.com/vikashdas770/")
+mlflow.set_tracking_uri("https://dagshub.com/shivanshkale17/MLflow.mlflow")
 
 # Load Wine dataset
 wine = load_wine()
@@ -25,7 +25,7 @@ max_depth = 8
 n_estimators = 5
 
 # Mention your experiment below
-mlflow.set_experiment('YT-MLOPS-Exp2')
+mlflow.set_experiment('My_exp_1')
 
 with mlflow.start_run():
     rf = AdaBoostClassifier(max_depth=max_depth, n_estimators=n_estimators, random_state=42)
@@ -60,3 +60,5 @@ with mlflow.start_run():
     mlflow.sklearn.log_model(rf, "Random-Forest-Model")
 
     print(accuracy)
+
+    
