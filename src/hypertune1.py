@@ -5,18 +5,14 @@ from sklearn.datasets import load_breast_cancer
 import pandas as pd
 import mlflow
 
-# Load the Breast Cancer dataset
 data = load_breast_cancer()
 X = pd.DataFrame(data.data, columns=data.feature_names)
 y = pd.Series(data.target, name='target')
 
-# Splitting into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Creating the RandomForestClassifier model
 rf = RandomForestClassifier(random_state=42)
 
-# Defining the parameter grid for GridSearchCV
 param_grid = {
     'n_estimators': [10, 50, 100],
     'max_depth': [None, 10, 20, 30]
@@ -53,13 +49,10 @@ with mlflow.start_run() as parent:
     best_params = grid_search.best_params_
     best_score = grid_search.best_score_
 
-    # Log params
     mlflow.log_params(best_params)
 
-    # Log metrics
     mlflow.log_metric("accuracy", best_score)
 
-    # Log training data
     train_df = X_train.copy()
     train_df['target'] = y_train
 
