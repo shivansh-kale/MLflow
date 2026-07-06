@@ -1,7 +1,7 @@
 import mlflow
 import mlflow.sklearn
 from sklearn.datasets import load_wine
-from sklearn.ensemble import AdaBoostClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix
 import matplotlib.pyplot as plt
@@ -28,7 +28,7 @@ n_estimators = 5
 mlflow.set_experiment('My_exp_1')
 
 with mlflow.start_run():
-    rf = AdaBoostClassifier(max_depth=max_depth, n_estimators=n_estimators, random_state=42)
+    rf = RandomForestClassifier(max_depth=max_depth, n_estimators=n_estimators, random_state=42)
     rf.fit(X_train, y_train)
 
     y_pred = rf.predict(X_test)
@@ -61,4 +61,3 @@ with mlflow.start_run():
 
     print(accuracy)
 
-    

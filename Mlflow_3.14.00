@@ -1,0 +1,25 @@
+MLflow 3.14 (what you're using)
+
+Project/
+│
+├── mlflow.db          ← Backend Store
+│
+└── mlartifacts/       ← Artifact Store
+    └── 2/
+        ├── <run_id>/
+        └── models/
+
+mlflow.db stores:
+    Experiments
+    Runs
+    Parameters
+    Metrics
+    Tags
+
+
+mlartifacts/ stores:
+    Models
+    Images
+    CSVs
+    Plots
+    Other logged files
