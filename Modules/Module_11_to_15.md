@@ -1,4 +1,4 @@
-# Module 11: MLmodel File ⭐
+# Module 11: MLmodel File 
 
 ## What is MLmodel?
 The **MLmodel** file is the **blueprint** of every MLflow model. It tells MLflow **how to load, interpret, and serve** the model.
@@ -34,7 +34,7 @@ MLflow Reads MLmodel
 Load / Deploy Model
 ```
 
-> 💡 **Remember:** Without the **MLmodel** file, MLflow doesn't know **how to use the saved model**.
+>  **Remember:** Without the **MLmodel** file, MLflow doesn't know **how to use the saved model**.
 ---
 
 # Module 12: Model Flavors
@@ -68,11 +68,11 @@ MLmodel
    └── python_function
 ```
 
-> 💡 **Remember:** One model can have **multiple flavors**.
+>  **Remember:** One model can have **multiple flavors**.
 
 ---
 
-# Module 13: PyFunc ⭐
+# Module 13: PyFunc 
 
 ## What is PyFunc?
 **PyFunc (Python Function)** is MLflow's **universal model interface**, allowing every supported model to be loaded and predicted using the same API.
@@ -105,7 +105,7 @@ Can include:
 - Business Rules
 - Postprocessing
 
-> 💡 **Remember:** PyFunc hides framework differences by exposing a common `predict()` interface.
+>  **Remember:** PyFunc hides framework differences by exposing a common `predict()` interface.
 
 ---
 
@@ -146,11 +146,11 @@ Prediction
 - Recommendation systems
 - RAG pipelines
 
-> 💡 **Remember:** `load_context()` runs **once**, while `predict()` runs **every inference request**.
+>  **Remember:** `load_context()` runs **once**, while `predict()` runs **every inference request**.
 
 ---
 
-# Module 15: Model Registry ⭐
+# Module 15: Model Registry 
 
 ## What is Model Registry?
 A **centralized repository** to **store, version, and manage** ML models. Think of it as **GitHub for ML models**.
@@ -188,7 +188,7 @@ Production
 Archived
 ```
 
-> ⭐ **Modern MLflow:** Uses **Aliases** (`Champion`, `Candidate`, `Shadow`, `Canary`) instead of fixed stages.
+> **Modern MLflow:** Uses **Aliases** (`Champion`, `Candidate`, `Shadow`, `Canary`) instead of fixed stages.
 
 ## Experiment vs Registry
 
@@ -198,7 +198,7 @@ Archived
 | Used during training | Used after model selection |
 | Tracks metrics | Manages versions |
 
-> 💡 **Remember:** **Experiment = Development**, **Registry = Production**.
+>  **Remember:** **Experiment = Development**, **Registry = Production**.
 
 ---
 
